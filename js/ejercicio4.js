@@ -8,34 +8,34 @@ de los tres objetos instanciados.
 */
 
 class Producto {
-    constructor(codigo, nombre, precio) {
-        this.codigo = codigo;
-        this.nombre = nombre;
-        this.precio = precio;
-    }
+  constructor(codigo, nombre, precio) {
+    this.codigo = codigo;
+    this.nombre = nombre;
+    this.precio = precio;
+  }
 
-    imprimirDatos() {
-        console.log("Codigo:", this.codigo);
-        console.log("Nombre:", this.nombre);
-        console.log("Precio:", this.precio);
-    }
+  imprimirDatos() {
+    console.log("Codigo:", this.codigo);
+    console.log("Nombre:", this.nombre);
+    console.log("Precio:", this.precio);
+  }
 }
-    function crearProducto() {
-        const codigo = prompt("Ingrese codigo del producto:");
-        const nombre = prompt("Ingrese nombre del producto:");
-        const precio = parseFloat(prompt("Ingrese el precio del producto:"));
-        return new Producto(codigo, nombre, precio);
-    }
+function crearProducto() {
+  const codigo = prompt("Ingrese codigo del producto:");
+  const nombre = prompt("Ingrese nombre del producto:");
+  const precio = parseFloat(prompt("Ingrese el precio del producto:"));
+  return new Producto(codigo, nombre, precio);
+}
 
-    const productos = []
-    for (let i = 0; i < 3; i++) {
-        const nuevoProducto = crearProducto();
-        productos.push(nuevoProducto);
-    }
-    console.log("Datos de los productos")
-    productos.forEach(producto => {
-        producto.imprimirDatos();
-        console.log("---------------");
+const productos = [];
+for (let i = 0; i < 3; i++) {
+  const nuevoProducto = crearProducto();
+  productos.push(nuevoProducto);
+}
+console.log("Datos de los productos");
+productos.forEach((producto) => {
+  producto.imprimirDatos();
+  console.log("---------------");
 });
 
-console.log("Proceso terminado.")
+console.log("Proceso terminado.");
